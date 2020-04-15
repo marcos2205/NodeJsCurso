@@ -1,0 +1,2 @@
+//npm install express --save //na pasta do projeto
+//npm install --save express-handlebars //template engine - funcionalidades ao html

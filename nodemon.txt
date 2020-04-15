@@ -1,0 +1,4 @@
+nodemon servidor http...identifica mudanças e restarta o server
+npm install nodemon -g
+
+-g global

@@ -1,0 +1,10 @@
+//carregar modulo -->     require("./somar")
+var SomaFunc = require("./somar")
+var SubFunc = require("./subtrair")
+var SubDiv = require("./dividir")
+var SubMulti = require("./multiplicar")
+
+console.log('Soma: ' + SomaFunc(1, 2))
+console.log(SubFunc(2, 1))
+console.log(SubDiv(15, 3))
+console.log(SubMulti(3, 15))
