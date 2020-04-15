@@ -12,9 +12,9 @@ app.set('view engine', 'handlebars')
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 //rotas
-app.get('/',function(req,res){
-    Post.findAll().then(function(posts){
-        res.render('home',{posts: posts})
+app.get('/', function (req, res) {
+    Post.findAll({order:[['id','DESC']]}).then(function (posts) {
+        res.render('home', { posts: posts })
     })
 })
 app.get('/cad', function (req, res) {
