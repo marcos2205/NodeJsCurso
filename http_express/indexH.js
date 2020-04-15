@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 //rotas
 app.get('/', function (req, res) {
-    Post.findAll({order:[['id','DESC']]}).then(function (posts) {
+    Post.findAll({ order: [['id', 'DESC']] }).then(function (posts) {
         res.render('home', { posts: posts })
     })
 })
@@ -30,7 +30,13 @@ app.post('/add', function (req, res) {
         res.send("erro")
     })
 })
-
+app.get('/deletar/:id', function (req, res) {
+    Post.destroy({ where: { 'id': req.params.id } }).then(function () {
+        res.send("deletada")
+    }).catch(function (erro) {
+        res.send("erro ao deletar")
+    })
+})
 //sempre o ultimo
 app.listen(8081, function () {
     console.log("servidor rodando na url http://localhost:8081")
