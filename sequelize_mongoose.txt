@@ -11,3 +11,8 @@ muita facilidade tanto na criação, população e migração de banco de dados.
 npm install --save sequelize
 
 npm install --save mysql2
+
+
+________________
+odm mogoose
+npm install --save mongoose
